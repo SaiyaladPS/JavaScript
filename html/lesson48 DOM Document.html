@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .jay{
+            color:red;
+            background-color: aqua;
+               }
+        .light{
+            background-color: orange;
+            color:black;
+        }
+        .dark{
+            background-color: purple;
+            color:aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <p id="title">ບົດທີ່1</p>
+    <p class="content">ການຮຽນພາສາ js</p>
+    <div class="light">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis, officia praesentium dolorem obcaecati reprehenderit, quaerat inventore quas quisquam facilis, nostrum illo id quae eius? Illo quia id earum. Aliquam, fugiat.</p>
+    </div>
+    <button onclick="aa()">js</button>
+    <button onclick="light()">ໂຫລດກາງເວັນ</button>
+    <button onclick="dark()">ໂຫລດກາງຄືນ</button>
+    
+    <script>
+        const titelEl = document.getElementById("title");
+        const contentEl = document.querySelector(".content");
+        const allEl = document.querySelector("p");
+        const box = document.querySelector(".light")
+
+        function aa(){
+            titelEl.style.color="red";
+        titelEl.style.background="yellow"
+        titelEl.style.fontSize="60px"
+
+        // contentEl.setAttribute("class","jay");
+        // box.setAttribute("class","dark");
+        }
+        function light(){
+            box.setAttribute("class","light");
+        }
+        function dark(){
+            box.setAttribute("class","dark");
+        }
+    </script>
+</body>
+</html>

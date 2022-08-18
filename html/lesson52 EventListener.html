@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select name="" id="manu">
+        <option value="JavaScript">JavaScript</option>
+        <option value="Python">Python</option>
+        <option value="Bootstrap">Bootstrap</option>
+    </select>
+    <p id="di"></p>
+    <button id="btn">ແຈ້ງເຕືອນ</button>
+   <script>
+        //ອ້າງອີງ
+        const manu = document.getElementById('manu');
+       const btn = document.getElementById('btn')
+
+
+        // event
+        manu.addEventListener('change',get);
+        const di = document.getElementById('di');
+
+        btn.addEventListener('click',jay)
+
+        function get(){
+            di.innerText = manu.value
+        }
+        
+        function jay(){
+            alert("ສະບາຍດີ")
+        }
+   </script>
+</body>
+</html>

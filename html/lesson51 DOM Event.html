@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="we()">
+    <div id="box">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia nostrum laboriosam aut, consectetur saepe minus accusamus deserunt hic eum ea veniam voluptas. Asperiores laborum a quibusdam soluta dolor autem debitis?</p>
+    </div>
+    <label for="">ຊື້</label>
+    <input type="text" placeholder="ກະລຸນາປ້ອນຊື່....." onfocus="hi(this)" onblur="au(this)">
+    <label for="">ເລືອກເຄືອງມຶ</label>
+    <select name="" id="manu" onchange="get()">
+        <option value="JavaScript">JavaScript</option>
+        <option value="Python">Python</option>
+        <option value="Bootstrap">Bootstrap</option>
+    </select>
+    <p id="di"></p>
+    <a href="" onmouseover="go(this)" onmouseout="as(this)">menu 1</a>
+    <a href="" onmouseover="go(this)" onmouseout="as(this)">menu 2</a>
+    <script>
+        function we(){
+            alert("ສະບາຍດີ")
+        }
+        function hi(obj){
+            obj.style.background="yellow";
+        }
+        function au(obj){
+            obj.style.background="red"
+        }
+        function get(){
+            const manu = document.getElementById("manu");
+            const di = document.getElementById("di");
+            console.log(manu.value.toUpperCase());
+            di.innerText = manu.value;
+        }
+        function go(obj){
+            obj.style.background="yellow"
+        }
+        function as(obj){
+            obj.style.background="red"
+        }
+    </script>
+</body>
+</html>

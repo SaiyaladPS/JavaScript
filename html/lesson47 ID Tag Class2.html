@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Saiyalad</p>
+    <p id="dk">HTML JS CSS</p>
+    <p id="mo">Holle</p>
+    <p id="no">js</p>
+    <p class="my">hoooo</p>
+    <button onclick="js()">ສະແດງຂໍ້ມູນ</button>
+    <button onclick="di()">ສະແດງຕົວເລກ</button>
+    <script>
+        // Tag
+        let a = document.getElementsByTagName("p");
+        console.log(a);
+        // id
+        let b = document.getElementById("dk");//ອ້າງອິງ
+        let c = document.getElementById("mo")
+        console.log(b);
+        
+        function js(){
+            b.innerText="ສອນພາສາໂປຣແກຣມມິ່ງ";//ສະແດງຜົນ
+            c.innerHTML="<b>ສອນພາສາ</b>";
+        }
+
+        let n = document.getElementById("no");
+        let x = 10;
+        let y = 20;
+        function di(){
+            n.innerHTML="ສະແດງຂໍ້ມູນຕົວແປ x= "+x+"= y"+y;
+        }
+
+        const m = document.querySelector(".my");
+        const l = document.querySelector("#di");
+        const o = document.querySelectorAll("p");
+        console.log(m)
+        console.log(l)
+    </script>
+</body>
+</html>

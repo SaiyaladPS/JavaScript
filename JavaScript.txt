@@ -1,0 +1,1395 @@
+	===================2/5/22==================
+		JavaScript
+JavaScript ແມ່ນຫຍັງ?
+	ເປັນພານາຄອມພິວເຕີທີ່ໃຊ້ໃນການພັດທະນາເວັບໄຊຮວ່ມກັບ HTML ເພຶອໃຫ້ເວັບມີລັກສະນະແບບໄດນາມິກ ຄຶ ເວັບສາມາດຕອບສະໜອງກັບຜູ້ໃຊ້ງານ ຫຼຶ ສະແດງເນື້ອຫາທີ່ແຕກຕ່າງກັນໄປໂດຍຈະອ້າງອິງຕາມເວັບບາວເຊີທີ່ຜູ້ເຂົ້າຊົມເວັບໃຫ້ງານຢູ່
+	ເປັນພາສາທີ່ເຮັດວຽກຝັ່ງຜູ້ໃຊ້ (Client Side Script) ໂດຍເວັບບາວເຊີຈະເຮັດໜ້າທີ່ປະມວນຜົນຄຳສັ່ງທີ່ຖືກຂຽນຂື້ນມາ ແລະ ຕອບສະໜອງຕໍ່ຜູ້ໃຊ້ໄດ້ໃນທັນທີ່ເຊັ່ນ ການສະແດງຂໍ້ຄວາມແຈ້ງເຕືອນ (Alert) ການຕວດສອບຂໍ້ມູນທີ່ຜູ້ໃຊ້ປ້ອນ (Validation) ເປັນຕົ້ນ
+		ຄວາມສາມາດຂອງ JavaScript
++ ສາມາດປ່ຽນແປງຮູບແບບການສະແດງຜົນຂອງ HTML, CSS ໄດ້
++ ກວດສວບຂໍ້ມູນຄວາມຖຶກຕ້ອງຂອງຂໍ້ມູນໄດ້
++ ກວດສວບ Browser ຂອງຜູ້ໃຊ້ໄດ້
++ ເກັບຂໍ້ມູນຜູ້ໃຊ້ໄດ້ ເຊັ່ນ ການໃຊ້ Cookie, Local Storage ເປັນຕົ້ນ
+__________________________________________________________________________________________
+		ຮູບແບບການຂຽນ JavaScript
+1. ແບບ Internal ຄື ກຳນົດ JavaScrip ໄວ້ໃນສວ່ນຂອງ <head></head> ຫຼຶ <body></body>
+ເຊັ່ນ:
+<script type="text"/javascript">
+	.....................Statement.....................
+</script>
+
+<script type="text"/javascript">
+	document.write("Saiyalad");	
+</script>
+2. ແບບ External ຄື ກຳນົດ JavaScript ໄວ້ເປັນໄຟດ້ານນອກທີ່ມີນາມສະກຸນ.js ຈາກນັ້ນກໍນຳເຂົ້າມາເຮັດວຽກໃນໜ້າເວັບ ຫຼຶ HTML ໄຟ
+	ວິທີການຂຽນ:
+		<script src="ຊື່ໄຟ.js"></script>
+ຕົວຢ່າງ:
+	document.write("Saiyalad")
+	document.write("<b>")
+	document.write("JavaScript")
+_____________________________________________________________________________________________________________________
+ການສະແດງຂໍ້ມູນ
+- document.write("ຂໍ້ຄວາມທີ່ຕ້ອງການສະແດງ")ສະແດງເປັນຂໍ້ຄວາມຕົວເລກ ຕົວແປ ຫຼຶ ແທັກ HTML ກໍໄດ້ໃນໜ້າເວັບ
+- alert("ຂໍ້ຄວາມແຈ້ງເຕືອນ")ສຳລັບແຈ້ງເຕືອນຜູ້ໃຊ້ໃນໜ້າເວັບ
+- console.log("ຂໍ້ຄວາມ ຫຼຶ ຕົວແປ່")ສຳຫລັບ debug ຄ່າຕ່າງໆ ແຕ່ຈະບໍ່ສະແດງຜົນໃນໜ້າເວັບ
+	+ console.error ສະແດງໃນຮູບແບບຂອງ error
+	+ console.warn ສະແດງໃນຮູບແບບແຈ້ງເຕືອນສີເຫຼຶອງ
+ຕົວຢ່າງ:
+	    <script>
+        document.write("Saiyalad");
+        alert("jay");
+        console.log("Hello JavaScript");
+        console.error("ເຈີໄວລັດ");
+        console.warn("ເຈີຂໍຜິດພາດ")
+    </script>
+____________________________________________________________________________________
+	ການຂຽນຄຳອະທິບາຍ (Comment)
+ວິທີ່ 1 ໂດຍໃຊ້ເຄືອງໜາຍ Slash (//) ໃຊ້ໃນການອະທິບາຍຄຳສັ່ງສັ້ນໆໃນຮູບແບບແຖວດຽວ
+ວິທີ່ 2 ຂຽນຄຳອະທິບາຍໄວ້ໃນເຄືອງໝາຍ /*...*/ ໃຊ້ໃນການອະທິບາຍຄຳສັ່ງຍາວໆ ຫຼຶ ແບບຫຼາຍແຖວ
+ໜາຍເຫດ: ສາມາດເຮັດໃຫ້ກຳສັ່ງເປັນຄອມເມັ້ນໄດ້
+ຕົວຢ່າງ:
+	    <script>
+        //Saiyalad;
+        /*Saiyaladjay
+        wirw to two*/
+    </script>
+______________________________________________________________________________________
+	ຕົວແປ ແລະ ຊິນິດຂອງຂໍມູນ
+ຕົວແປ ຫລຶ ຕົວປ່ຽນ ຄື ຊື່ທີ່ຖຶກຍິຍາມຂື້ນມາເພືອໃຊ້ເກັບຄ່າຂໍ້ມູນສຳລັບນຳໄປໃຊ້ງານໃນໂປຮແກຮມ ໂດຍຂໍ້ມູນອາດຈະປະກອບດວ້ຍຂໍ້ຄວາມ ຕົວເລກ ຕົວອັກສອນ ຫຼຶ ຜົນຫລັບຈາກການປະມວນຜົນຂໍ້ມູນ
+	ຮູບແບບການຕັ້ງຊື່
+1. ຂື້ນຕົນດວ້ຍອັກສອນໃນພາສາອັງກິດຕາມດວ້ຍຕົວອັກສອນ ຫຼຶ ຕົວເລກ
+2. ຫ້າມຂື້ນຕົ້ນດວ້ຍຕົວເລກ ຫຼຶ ສັນຍາລັກພິເສບ
+3. ຂື້ນຕົ້ນດວ້ຍ $ (dollar sing) ແລະ _(undercore) ໄດ້
+4. ມີລັກສະນະເປັນ case sensitive ຄື ຕົວພິມນ້ອຍພິມໃຫຍ່ຈະມີຄວາມໜາຍທີ່ແຕກຕ່າງກັນ
+5. ບໍ່ຊ້ຳກັບຄຳສະງວນ (Keyword)
+	ຕົວຢ່າງ:
+	   <script>
+        let name = "Saiyalad",Name = "jay",NAME = "goo",name1 = "joe";
+        document.write(name,Name,NAME,name1);
+    </script>
+	ຕົວແປໃນ JavaScript ເປັນຮູບແບບ Dynamic Typing
++ ຕົວແປແບບ Dynamic Typing ຄືຊະນິດຕົວແປຈະເປັນຫຍັງກໍໄດ້ຕາມຄ່າທີ່ຕົວມັນເກັບໂດຍບໍ່ຕ້ອງປະກາດຊະນິດຂໍ້ມູນ
++ ຕົວແປແບບ Static Typing ຕ້ອງປະກາດຊະນິດຂໍ້ມູນໃນຕ້ອນເລິ່ມຕົ້ນເຊັ້ນ int, double, char ເພືອບອກວ່າຕົວແປນີ້ຈະເກັບຊະນິດໃດ
+	ການນິຍົມຕົວແປ ຮູບແບບເກົ່າ
+					ຕົວຢ່າງ
+var (ປ່ຽນແປງຄ່າໃນຕົວແປໄດ້)			var money;
+var ຊື່ຕົວແປ;				var = money=100;
+var ຊື່ຕົວແປ = ຄ່າເລິ່ມຕົ້ນ			money=200;
+var ຊື່ຕົວແປ = ຄ່າເລິ່ມຕົ້ນ,ຊື່ຕົວແປ = ຄ່າເລິ່ມຕົ້ນ		var a, b, c, d;
+					var x =10,y = 20, z = 30;
+***ຕົວແປ່ທີ່ປະກາດໄວ້ແຕ່ຍັງບໍ່ໄດ້ກໍານົດຄ່າ ຈະມີຄ່າເປັນ undefined ໂດຍອັດຕະໂນມັດ
+	ການນິຍົມຕົວແປ ຮູບແບບໃຫມ່(2015)
+					ຕົວຢ່າງ
+let (ປ່ຽນແປງຄ່າໃນຕົວແປໄດ້)			let money;
+let ຊື່ຕົວແປ;					let = money=100;
+let ຊື່ຕົວແປ = ຄ່າເລິ່ມຕົ້ນ				money=200;
+let ຊື່ຕົວແປ = ຄ່າເລິ່ມຕົ້ນ,ຊື່ຕົວແປ = ຄ່າເລິ່ມຕົ້ນ		let a, b, c, d;
+					let x =10,y = 20, z = 30;
+***ຕົວແປ່ທີ່ປະກາດໄວ້ແຕ່ຍັງບໍ່ໄດ້ກໍານົດຄ່າ ຈະມີຄ່າເປັນ undefined ໂດຍອັດຕະໂນມັດ
+ຕົວຢ່າງ:
+	   <script>
+        let name; //ສ້າງຕົວແປແຕ່ບໍ່ມີການກຳນົດຄ່າວ່າເປັນຄ່າຫຍັງ
+        name = "Saiyalad"//ກຳນົດຂໍຄວາມລົງໄປເກັບໄວ້ໃນຕົວປ່ຽນ name
+        let age = 20;
+        document.write(name);
+        document.write("ອາຍຸ = ",age);
+    </script>
+
+	ການນິຍົມຕົວແປ (2015)
+const (ຄ່າຄົງທີ່)
+const ຊື່ຕົວແປ = ຄ່າຂອງຕົວແປ;
+ເຊັ່ນ:	const money = 100;
+	money = 200;//ປ່ຽນແປງຄ່າເດິມບໍ່ໄດ້
+ຕົວຢ່າງ:
+	<script>
+        const go = 10;
+        console.write(go);
+    </script>
+_______________________________________________________________________________________
+		 ຊະນິດຂອງຂໍມູນ Data Type
+Data Type		ຄຳອະທິບາຍ		ຮູບແບບຂໍ້ມູນ
+
+boolean		ຄ່າທາງຕັກກະສາດ	True / False
+number		ຕົວເລກບໍ່ມີທົດສະນິຍົມ	20
+		ຕົວເລກທົດສະນິຍົມ	30.15
+string		ຂໍ້ຄວາມ		"Saiyalad"
+object		ຂໍ້ມູນເຊິງກວັດຖຸ	{finstName:"jay",LastName:"Java",age:20};
+array		ຊຸດຂໍ້ມູນ		["ໜາກມ່ວງ","ໜາກນາວ","ໜາກມັງກອນ"]
+		ຫົວຂໍ້ທີ່ກຽວກັບຕົວແປ
++ typeof ຄື ເຊັກຊະນິດຂອງຂໍ້ມູນ
++ null ຄື ບໍ່ມີການຳນົດຄ່າຖຶກກຳນົດຄ່າໂດຍຜູ້ຂຽນ
++ undefined ບໍ່ມີການກຳນົດຄ່າ (ເປັນຄ່າເລິ່ມຕົ້ນຂອງໂປຮແກຮມ)
+	ຈັດການຕົວເລກ (Number)
+let x,y;
+x = 20; // integer <<ບໍ່ມີທົດສະນິຍົມ
+y = 20.15; // float <<ມີທົດສະນິຍົມ
+	ຈັດການອັກສອນ ແລະ ຂໍ້ມູນຄວາມດວ້ຍ string
+ການປະກາດ string ຂື້ນມາໃຊ້ຕ້ອງກຳນົດເນື້ອຫາຫຼຶຄ່າຢູ່ໃນເຄືອງໜາຍ ' (single quote) ຫຼຶ " (double quote)
+	let a = 'Saiyalad';
+	let b = "JavaScript";
+	let c = 'jay';
+ຕົວຢ່າງ:
+	    <script>
+        let money = 500;
+        let price = 99.99;
+        let name = 'Saiyalad'
+        let message = "jay"
+
+        let checkName = false;
+        let checkProduct = true;
+
+        console.log(typeof(money));
+        console.log(typeof(price));
+        console.log(typeof(name));
+        console.log(typeof(message));
+        console.log(typeof(checkName));
+        console.lgo(typeof(checkProduct));
+
+    </script>
+	-------------------------------------------------------------------------------------------------------
+ການແປງຊະນິດຂໍ້ມູນ (Type Conversion)
++ ແປງຈາກ String ເປັນ Number
+- x = parseInt('1.2');
+- x = parseFloat('1.2');
+- ໃຊ້ເຄືອງໜາຍ (+...) ເພິ່ມໄປໃສທາງໜ້າ
++ ແປງຈາກ Number ເປັນ String
+- ໃຊ້ເຄືອງໜາຍ " " + ເປັນຕົວແປ ຫຼຶ ຄ່າທີ່ເປັນຕົວເລກ
+- ໃຊ້ toString(...) ເຊັ່ນ x.toString(...)
+ຕົວຢ່າງ:
+<script>
+        let age = toString(20.15);
+        let name = parseInt("Saiyald");
+
+        console.log(age);
+        console.log(name);
+        console.log(typeof(age))
+        console.log(typeof(name))
+    </script>
+------------------------------------------------------------------------------------------------------------------------
+	ອາເລ (Array)
+ຄວາມໜາຍທີ່ 1 : ຊູດຂອງຕົວແປທີ່ຢູ່ໃນຮູບລຳດັບໃຊ້ເກັບຂໍມູນໃຫ້ຢູ່ໃນກູ່ມດຽວກັນ ຂໍ້ມູນພາຍໃນ ອາເລຈະຖຶກເກັບໃນໜ່ວຍຄວາມຈຳໃນຕຳແໜ່ງທີ່ຕໍ່ເນືອງກັນ ໂດຍຂະໜາດຂອງອາເລຈະນ້ອຍ ຫຼຶ ໃຫຍ່ ຂື້ນກັບຈຳນອນມິຕິທີ່ກຳນົດຂື້ນ
+ຄວາມໜາຍທີ່ 2 : ເປັນຕົວແປທີ່ໃຊ້ໃນການເກັບຂໍ້ມູນທີ່ມີລຳດັບທີ່ຕໍ່ເນືອງຊື່ງຂໍ້ມູນມີຄ່າໂດຍໃຊ້ຊື່ອ້າງອິງໄດ້ພຽງຊື່ດຽວ ແລະ ໃຊ້ໜາຍເລກກຳກັບ (index) ໃຫ້ກັບຕົວແປເພຶອຈຳແນກຄວາມແຕກຕ່າງຂອງຕົວແປແຕ່ລະຕົວ
+	ວິທີ່ການໃຊ້ງານ Array
+ວິທີ່ 1 ສ້າງໂດຍໃຊ້ຄຳສັ່ງ Array()
+	let ຊື່ອາເລ = new Array();
+	let ຊື່ອາເລ = Array(ຂໍ້ມູນ1,ຂໍ້ມູນ2,...);
+	ເຊັ້ນ
+	let myArray = new Array();
+	mayArray[0] = 2000;
+	let days = Array("ຈັນ","ອັງຄານ","ພູດ");
+ຕົວຢ່າງ:
+    <script>
+        let number = new Array(100,"200",300,40.12,500,true);
+        console.log(number);
+        console.log(number[2])
+        console.log(number[5])
+    </script>
+ວິທີ່ 2 	ເປັນຕົວແປທີ່ໃຊ້ໃນການເກັບຂໍ້ມູນທີ່ມີລຳດັບທີ່ຕໍ່ເນືອງຊືງຂໍ້ມູນມີຄ່າໄດ້ຫຼາຍຄ່າໂດຍໃຊ້ຊື່ອ້າງອິງໄດ້ພຽງຊື່ດຽວ ແລະ ໃຊ້ໜາຍເລກກຳກັບ (index) ໃຫ້ກັບຕັວແປເພື່ອຈຳແນກຄວາມແຕກຕ່າງຂອງຄ່າຕົວແປແຕ່ລະຕົວ
+	ຮູບແບບ:
+ສ້າງໂດຍໃຊ້ເຄືອງໜາຍ[]
+let ຊື່ອາເລ = [ຂໍ້ມູນ1,ຂໍ້ມູນ2,...];
+ເຊັ່ນ:
+let color = ["ແດງ","ຟ້າ","ເຫຼຶງອ"];
+ຕົວຢ່າງ:
+	    <script>
+        let color =["ແດງ","ຟ້າ","ເຫລືອງ"]
+        color[1] = "ດຳ"//ປ່ຽນຄ່າ
+        console.log(color[1])
+    </script>
+_______________________________________________________________________
+	ຕົວກຳເນີນການ (Operator)
+ກູ່ມຂອງເຄືອງໜາຍ ຫຼຶ ສັນຍາລັກທີ່ໃຊ້ໃນການຂຽນໂປຮແກຮມ
+	A+B
+1. ຕົວດຳເນີນການ (Operator)
+2. ຕົວທີ່ຖຶກດຳເນີີນການ (Operand)
+	ຕົວດຳເນີນການ ທາງຄະນິດສາດ
+Operator		ຄຳອະທິບາຍ
++		ບວກ
+-		ລົບ
+*		ຄູນ
+/		ຫານ
+%		ຫານເອົາເສດ
+ຕົວຢ່າງ:
+    <script>
+        let a = 20 ,b = 20;//ຂຽນໃນຕົວແປແລ້ວເອົາມາບອກ
+        console.log("ບອກ",a+b);
+        console.log("ລົບ",10-5);
+        console.log("ຄູນ",5*10);
+        console.log("ຫານ",10/5);
+        console.log("ຫານເອົາເສດ",10%4);
+        console.log("ຍົກກຳລັງ",5**2);
+    </script>
+	ຕົວດຳເນີນປ່ຽບທ່ຽບ
+Operator		ຄຳອະທິບາຍ
+==		ເທົ່າກັບ
+!=		ບໍ່ເທົ່າກັບ
+>		ຫຼາຍກວ່າ
+<		ນ້ອຍກວ່າ
+>=		ຫຼາຍກວ່າເທົ່າກັບ
+<=		ນ້ອຍກວ່າເທົ່າກັບ
+ຕົວຢ່າງ:
+   <script>
+        let a = 5 , b = 10;
+
+        let check = (a==b);
+        console.log(check);
+        console.log(a>b);
+        console.log(a<b);
+        console.log(a>=b);
+        console.log(a<=b);
+    </script>
+	ຕົວດຳເນີນການທາງຕັກຄະສາດ
+Operator		ຄຳອະທິບາຍ
+&&		AND       ແລະ  ເງືອນໄຂຕ້ອງເປັນຄວາມຈິງທັງສອງຈືງອອກ true
+||		OR         ຫຼຶ  ເງືອນເປັນຈິງຕົວດຽວກໍຈະອອກ true
+!		NOT
+
+a	!a	a	b	a&&b	a||b
+true	false	false	false	false	fales
+false	true	false	true	false	true
+		true	false	false	true
+		true	true	true	true
+ຕົວຢ່າງ:
+<script>
+        let score = 80;
+        console.log(score >= 70 && score<=100);
+        let ger = 90;
+        console.log(ger >=80 || ger <=100)
+    </script>
+		ຕົວດຳເນີນການເພິ່ມຄ່າ ແລະ ລົດ
+Operator		ຮູບແບບການຂຽນ	ຄວາມໜາຍ
+++(Prefix)		++a		ເພິ່ມຄ່າໃຫ້ a ກ່ອນ 1ຄ່າແລ້ວນຳໄປໃຊ້
+++(Postfix)	a++	ນຳຄ່າປັດຈຸບັນໃນ a ໄປໃຊ້ກ່ອນແລ້ວຄ່ອຍເພິ່ມຄ່າ
+--(Prefix)		--b		ລົດຄ່າໃຫ້ b ກ່ອນ 1ຄ່າແລ້ວນຳໄປໃຊ້
+--(Postfix)		b--	ນຳຄ່າປັດຈຸບັນໃນ b ໄປໃຊ້ກ່ອນແລ້ວຄ່ອຍລົດຄ່າ
+ຕົວຢ່າງ:
+<script>
+        let a = 5 , b = 10 , c = 20 , d = 30;
+        //ເພິ່ມແບບ Prefix
+        console.log("ຄ່າເລິ່ມຕົ້ນ",a);
+        console.log(++a);
+        console.log("ຄ່າປັດຈຸບັນ",a);
+
+        //ເພິ່ມແບບ Postfix
+        console.log("ຄ່າເລິ່ມຕົ້ນ",b);
+        console.log(b++);
+        console.log("ຄ່າປັດຈຸບັນ",b);
+
+        //ລົດຄ່າແບບ Prefix
+        console.log("ຄ່າເລິ່ມຕົ້ນ",c);
+        console.log(c--);
+        console.log("ຄ່າປັດຈຸບັນ",c);
+
+        //ລົດຄ່າແບບ Postfix
+        console.log("ຄ່າເລິ່ມຕົ້ນ",d);
+        console.log(--d);
+        console.log("ຄ່າປັດຈຸບັນ",d);
+    </script>		
+_______________________________________________________________________________________
+	Compound Assignment
+Assignment		ຮູບແບບ		ຄວາມໜາຍ
++=			x+=y		x=x+y
+-=			x-=y		x=x-y
+*=			x*=y		x=x*y
+/=			x/=y		x=x/y
+%=			x%=y		x=x%y
+ຕົວຢ່າງ:
+  <script>
+        let x=10,y=20;
+
+        console.log("ກ່ອນ = ",x);
+        x+=y;  //x = x+y
+        console.log("ຫຼັງ",x);
+    </script>
+			ລຳດັບຄວາມສຳຄັນຂອງຕົວດຳເນີນການ
+ລຳດັບ		ເຄືອງໜາຍ		ລຳດັບການເຮັດວຽກ
+1		()		
+2		++ , --		ຂ້າຍໄປຂວາ
+3		* , / , %		ຂ້າຍໄປຂວາ
+4		+ , -		ຂ້າຍໄປຂວາ
+5		< , <= , > , >=	ຂ້າຍໄປຂວາ
+6		== , !=		ຂ້າຍໄປຂວາ
+7		&&		ຂ້າຍໄປຂວາ
+8		||		ຂ້າຍໄປຂວາ
+9		= , += ,-=,*=,/=,%= ຂ້າຍໄປຂວາ
+	ກໍລະນີສືກສາ
+	1. 5+8*9 = 77 ເພາະວ່າ*ມີລໍາດັບຄວາມສຳຄັນກວ່າ+ 
+	2. 10-4+2 = 8  - ກັບ + ມີລຳດັບຄວາມສຳຄັນເທົ່າກັນ
+	3. 10-(2+1)=7  () ສຳຄັນກວ່າ + ແລະ -
+	4. 5*2-40/5=2  ຄູນກ່ອນ ແລ້ວ ຫານ ແລ້ວເອົາຜົນອອກທັງສອງມາລົບ
+	5. 7+8/2+25=36 * ແລ້ວ + ທາງຊ້າຍກ່ອນ ຈາກນັ້ນ + ທາງຂວາ
+_____________________________________________________________________________________
+ໂຄງສ້າງຄວບຄູມ (Control Structure)
+ຄື ກຸ່ມຄຳສັ່ງທີ່ໃຊ້ຄວບຄຸມການເຮັດວຽກຂອງໂປຮແກຣມ
+- ແບບລໍາດັບ (Sequence)
+- ແບບມີເງືອນໄຂ (Condition)
+- ແບບເຮັດຊໍາ (Loop)
+	ແບບມີເງືອນໄຂ (Condition)
+ກຸ່ມຄຳສັ່ງທີ່ໃຊ້ຕັດສິນໃຈໃນການເລືອກເງືອນໄຂຕ່າງ ພາຍໃນໂປຮແກຣມມາເຮັດວຽກ
+	- if
+	- Switch..Case
+ຮູບແບບຄຳສັ່ງແບບເງືອນໄຂດຽວ
+- if statement
+ເປັນຄຳສັ່ງທີ່ກຳນົດເງືອນໄຂໃນການຕັດສິນໃຈເຮັດວຽກຂອງໂປຮແກຮມຖ້າເງືອນໄຂເປັນຄວາມຈິງຈະທຳງານຕາມຄຳສັ່ງຕ່າງໆ ທີ່ກຳນົດພາຍໃຕ້ເງືອນໄຂນັ້ນໆ
+	ຮູບແບບ:
+if(ເງືອນໄຂ){
+ຄຳສັ່ງເມືອເງືອນໄຂເປັນຄວາມຈິງ;
+}
+ຕົວຢ່າງ:
+    <script>
+    let a = 5000;
+    let b = 4000;
+    let c = a-b;
+    if(a>=b){
+        console.log("ທ່ານສາມາດຖອນເງີນໄດ້",b);
+        console.log("ຈຳນອນເງີນຄົງເຫຼຶອງ",c);
+    }
+    </script>
+ຮູບແບບຄຳສັ່ງແບບ 2 ເງືອນໄຂ
+if(ເງືອນໄຂ){
+	ຄຳສັ່ງເມືອເງືອນໄຂເປັນຄວາມຈິງ;
+}else{
+	ຄຳສັ່ງເມືອເງືອນໄຂບໍ່ເປັນຄວາມຈິງ;
+}
+ຕົວຢ່າງ:
+<script>
+        let a = 5000;
+        let b = 6000;
+
+        if(b<=a){
+            console.log("ດຳເນີນການຕໍ່ຖອນເງີນ=",b);
+            c = a-b;
+            console.log("ຍອດເງີນຍັງເຫຼຶອງ",c);
+        }else{
+            console.error("ເງີນໃນບັນຊີຂອງທ່ານບໍ່ພຽງພໍ")
+        }
+    </script>
+ໜາຍເຫດ:ຂໍຄວນລະຫວັງ
+ຂໍຄວາມລະວັງການຂຽນ if ເພືອກວດສອບເງືອນໄຂ
+if(ເງືອນໄຂ){
+	ຄຳສັ່ງເມືອມີເງືອນໄຂເປັນຄວາມຈິງ;
+}if(ເງືອນໄຂ){
+	ຄຳສັ່ງເມືອມີເງືອຍໄຂເປັນຄວາມຈິງ;
+}
+ໜາຍເຫດ: ຈະສະແດງເງືອນໄຂທີ່ເປັນຄວາມຈິງມາທັງໜົດ
+ຕົວຢ່າງ:
+    <script>
+        let score = 70;
+
+        if(score>70){
+            console.log("A"); 
+        }
+        if(score>60){
+            console.log("B");
+        }       
+         if(score>50){
+            console.log("C");
+        }
+        if(score>40){
+            console.log("D");
+        }
+		ຮູບແບບຄຳສັ່ງແບບຫຼາຍເງືອນໄຂທີ່ຖຶກຕ້ອງ
+if(ເງືອນໄຂທີ່ 1){
+	ຄຳສັ່ງເມືອເງືອນໄຂທີ່ 1 ເປັນຄວາມຈິງ;
+}else if(ເງືອນໄຂທີ່ 2){
+	ຄຳສັ່ງເມືອເງືອນໄຂທີ່ 2 ເປັນຄວາມຈິງ;
+}else if(ເງືອນໄຂທີ່ 3){
+	ຄຳສັ່ງເມືອເງືອນໄຂທີ່ 3 ເປັນຄວາມຈິງ;
+}esle{
+	ຄຳສັ່ງເມືອທຸກເງືອນໄຂບໍ່ເປັນຄວາມຈິງ;
+}
+ໜາຍເຫດ:ຈະສະແດງເງືອນໄຂທີ່ເປັນຄວາມຈິງມາອັນດຽວ
+ຕົວຢ່າງ:
+<script>
+        let score = 50;
+
+        if(score>=70){
+            console.log("A"); 
+        }
+        else if(score>=60){
+            console.log("B");
+        }       
+        else if(score>=50){
+            console.log("C");
+        }
+        else if(score>=40){
+            console.log("D");
+        }
+        else{
+            console.log("F")
+        }
+    </script>
+________________________________________________________________________________
+if .. else ແບບຫຍໍ້ (Ternary Operator)
+ຕົວແປ = (ເງືອນໄຂ)?ຄຳສັ່ງເມືອເງືອນໄຂເປັນຄວາມຈິງ: ຄຳສັ່ງເມືອເງືອນໄຂບໍ່ເປັນຄວາມຈິງ;
+- ຖ້າທຽບໃສ if else ທົ່ວໄປ:
+	if(ເງືອນໄຂ){
+	ຄຳສັ່ງເມືອເງືອນໄຂເປັນຄວາມຈິງ;
+	}else{
+	ຄຳສັ່ງເມືອເງືອນໄຂບໍ່ເປັນຄວາມຈິງ;
+	}
+ຕົວຢ່າງ:
+<script>
+        let score = 40;
+        let pass = score>50 ? "ຜ່ານ" : "ບໍ່ຜ່ານ";
+        console.log(pass);
+<script>
+	ການຂຽນ if ຊ້ອນ if
+if(ເງືອນໄຂທີ່ 1){
+	if(ເງືອນໄຂທີ່ 2){
+	ຄຳສັ່ງເມືອເງືອນໄຂທີ່ 2 ເປັນຄວາມຈິງ;
+	}
+}
+ຕົວຢ່າງ:
+    <script>
+        let age = 15;
+        if(age<=15){
+            if(age==15){
+                console.log("m3");
+            }else if(age==14){
+                console.log("m2")
+            }else if(age==13){
+                console.log("m1")
+            }else{
+                console.log("No")
+            }
+        }else{
+            console.log("ມໍປາຍ / ປະລິນຍາ")
+        }
+    </script>
+_________________________________________________________________________
+ແບບມີເງືອນໄຂ (Condition)
+	ກຸ່ມຄຳສັ່ງທີ່ໃຊ້ຕັດສິນໃຈໃນການເລືອກເງືອນໄຂຕ່າງໆ ພາຍໃນໂປຮແກຣມມາເຮັດວຽກ
++ Switch..Case
+	Switch ເປັນຄຳສັ່ງທີ່ໃຊ້ກຳນົດເງືອນໄຂຄ້າຍໆກັບ if ແຕ່ຈະເລືອກພຽງໜຶ່ງທາງເລືອກອອກມາເຮັດວຽກໂດຍນຳເອົາຄ່າໃນຕົວແປມາກຳນົດເປັນທາງເລືອກຜ່ານຄຳສັ່ງ case
+ຮຸບແບບຄຳສັ່ງ:
+switch(ສິ່ງທີ່ຕ້ອງການຕວດສວບ){
+
+	case ຄ່າທີ່ 1 : ຄຳສັ່ງທີ່1;
+		break;
+	case ຄ່າທີ່ 2 : ຄຳສັ່ງທີ່2;
+		break;
+	...............
+	case ຄ່າທີ່ N : ຄຳສັ່ງທີ່ N;
+		break;
+
+	default: ຄຳສັ່ງເມືອບໍ່ມີຄ່າທີ່ຖຶກກັບທີ່ລະບຸໃນ case
+}
+****ຄຳສັ່ງ break ຈະເຮັດໃຫ້ໂປຣແກຣມກະໂດດອອກໄປເຮັດວຽກນອກຄຳສັ່ງ switch ຖ້າບໍ່ມີຄຳສັ່ງ break ໂປຮແກຣມຈະເຮັດຄຳສັ່ງຕໍ່ໄປເລືອຍໆ ຈົນຈົບການເຮັດວຽກ
+ຕົວຢ່າງ:
+    <script>
+        let statrs = 1;
+
+        let light;
+  switch(statrs){
+            case 0 : light="ປິດໄຟ";
+                break;
+            case 1 : light="ເປິດໄຟ";
+                break;
+            default : light="ບໍ່ພົບຂໍມູນ"
+        }
+
+        console.log(light);
+</script>
+___________________________________________________________________________________
+	ຂຽນໂປຮແກຮມຊອກຫາເລກຄູ່ເລກຄີ
+ຕົວຢ່າງ
+    <script>
+        //  ໂປຣແກຣມຄຳນວນເລກຄູ່ເລກຄີກ
+let x = 50;
+
+if(x%2 == 0){
+    console.log("ເລກຄູ່");
+}else{
+    console.log("ເລກຄີ");
+}
+    </script>
+	ຂຽນໂປຣແກຣມປ່ຽບທ່ຽບຕົວເລກ
+ຕົວຢ່າງ
+ <script>
+        // ໂປຮແກຮມປ່ຽບທ່ຽບຕົວເລກ
+        let x = 50, y = 100;
+
+        if(x>y){
+            console.log("x ມີຄ່າຫຼາຍກວ່າ");
+        }else if(x<y){
+            console.log("y ມີຄ່າຫຼາຍກວ່າ");
+        }else{
+            console.log("ສອງຕົວນີ້ມີຄ່າເທົ່າກັນ");
+        }
+    </script>
+________________________________________________________________________________________
+	ແບບເຮັດຊ້ຳ (Loop)
+ກຸ່ມຄຳສັ່ງທີ່ໃຊ້ໃນການວົນຮອບ (loop) ໂປຮແກຮມຈຳເຮັດວຽກໄປເລືອຍໆຈົນກວ່າເງືອນໄຂທີ່ກຳນົດໄວ້ບໍ່ເປັນຄວາມຈິງ ຈຶງຈະຫຍຸດທຳງານ
+ມີທັງໜົດ 3 loop ຄື:
+- While
+- For
+- Do..While
+ຄຳສັ່ງທີ່ກຽວກັບ Loop
+- break ຖ້າໂປຣແກຣມພົບຄຳສັ່ງນີ້ຈະຫລຸດຈາກການເຮັດວຽກໃນ loop ທັນທີ່ ເພຶອໄປເຮັດຄຳສັ່ງອືນທີ່ຢູ່ນອກ loop
+- continue ຄຳສັ່ງນີ້ຈະເຮັດໃຫ້ຫຍຸດການເຮັດວຽກແລ້ວຍ້ອນກັບໄປເລິ່ມຕົ້ນການເຮັດວຽກທີ່ຕົ້ນ loop ໃຫມ່
+
+ຄຳສັ່ງ While
+	- While loop
+ຈະເຮັດວຽກຕາມຄຳສັ່ງພາຍໃນ while ໄປເລືອຍໆເມືອເງືອນໄຂທີ່ກຳນົດເປັນຄວາມຈິງ
+ຮູບແບບຄຳສັ່ງ:
+while(ເງືອນໄຂ){
+	ຄຳສັ່ງທີ່ຈະເຮັດຊ້ຳເມືອເງືອນໄຂເປັນຄວາມຈິງ;
+}
+ຕົວຢ່າງ:
+<script>
+        let count = 1;  //ຈຳນວນຮອບ
+        while(count<=3){
+            console.log("ຜະລິດຄິນຄັ້ງທີ່",count); //1, 2, 3
+            count++; //1 => 2 => 3 =>4
+        }
+    </script>
+ຫຼຶວ່າ
+    <script>
+        let count = 1;  //ຈຳນວນຮອບ
+        while(count<=5){
+            console.log("ຜະລິດຄິນຄັ້ງທີ່",count); //1, 2, 3, 4 ,5
+            if(count==3){
+                break;  //ກຳນົດໃຫ້ຫຍຸດຜະລິດເມືອຄົບ3
+            }
+            count++; //1 => 2 => 3 =>4 =>5 *=>6
+        }
+____________________________________________________________________________________________
+	ຄຳສັ່ງ For loop
+ເປັນຮູບແບບທີ່ໃຊ້ໃນການກວດສອບເງືອນໄຂ ມີການກຳນົດຄ່າເລິ່ມຕົ້ນ ແລະ ປ່ຽນຄ່າໄປພ້ອມໆກັນ ເມືອເງືອນໄຂໃນຄຳສັ່ງ for ເປັນຄວາມຈິງກໍຈະເຮັດວຽກຕາມຄຳສັ່ງທີ່ສະແດງໄວ້ພາຍໃນຄຳສັ່ງ for ໄປເລືອຍໆ
+	ຮຸບແບບຄຳສັ່ງ
+	for(ຄ່າເລິ່ມຕົ້ນຂອງຕົວແປ; ເງືອນໄຂ; ປ່ຽນແປງຄ່າຕົວແປ){
+	ຄຳສັ່ງເມືອເງືອນໄຂເປັນຄວາມຈິງ;
+	}
+ເຊັ່ນ
+for(int i = 1;i<=10;i++){
+ຄຳສັ່ງເມືອເງືອນໄຂເປັນຄວາມຈິງ;
+}
+ຕົວຢ່າງ:
+<script>
+
+        for(let count = 1; count<=5;count++){//ຖ້າເພິ່ມເພຶອລະສອງ count+=2
+            console.log("ຜະລິດສິນຄ້າທີ່",count);
+        }
+________________________________________________________________________________________
+	ຄຳສັ່ງ Do..While
++ Do..While
+ໂປຣແກຣມຈະເຮັດວຽກຕາມຄຳສັ່ງຢ່າງນ້ອຍ 1 ຮອບ ເມືອເຮັດວຽກແລ້ວຈະມາກວດສອບເງືອນໄຂທີ່ຄຳສັ່ງ while ຖ້າເງືອນໄຂເປັນຄວາມຈິງຈະວົນກັບຂື້ນໄປເຮັດວຽກທີ່ຄຳສັ່ງໃຫມ່ອີກຮອບ ແຕ່ຖ້າບໍ່ເປັນຄວາມຈິງຈະຫລຸດອອກຈາກ loop
+ຮຸບແບບ:
+do{
+ຄຳສັ່ງຕ່າງໆ ເມືອເງຶອນໄຂເປັນຄວາມຈິງ;
+} while(ເງືອນໄຂ);
+ຕົວຢ່າງ:
+<script>
+        let count = 1;
+        do{
+            console.log(count);
+            count++;
+        }while(count<=5);
+    </script>
+	ຂໍ້ແຕກຕ່າງ ແລະ ການໃຊ້ງານ loop ແຕ່ລະຕົວ
+- for ໃຊ້ໃນກໍລະນີຮູ້ຈຳນວນຮອບທີ່ຊັດເຈນ
+- while ໃຊ້ໃນກໍລະນີທີ່ບໍ່ຮູ້ຈຳນວນຮອບ
+- do..while ໃຊ້ໃນກໍລະນີ້ທີ່ຢາກໃຫ້ລອງເຮັດກອ່ນ 1 ຮອບ ແລ້ວ ເຮັດຊ້ຳໄປເລືອຍໆ ກາບເທົ່າທີ່ເງືອນໄຂເປັນຄວາມຈິງ
+	ຄຳສັ່ງທີ່ກຽວກັບ Loop
+- break ຖ້າໂປຣແກຣມພົບຄຳສັ່ງນີ້ຈະຫລຸດຈາກການເຮັດວຽກໃນ loop ທັນທີ່ ເພຶອໄປເຮັດຄຳສັ່ງອືນທີ່ຢູ່ນອກ loop
+- continue ຄຳສັ່ງນີ້ຈະເຮັດໃຫ້ຫຍຸດການເຮັດວຽກແລ້ວຍ້ອນກັບໄປເລິ່ມຕົ້ນການເຮັດວຽກທີ່ຕົ້ນ loop ໃຫມ່
+ຕົວຢ່າງ:
+<script>
+        for(let count = 1;count <= 10; count++){
+            if(count==5)break;
+            console.log(count);
+        }
+        console.log("ຈົບໂປຣແກຣມ")
+    </script>
+ຕົວຢ່າງ:
+<script>
+        for(let count = 1;count <= 10; count++){
+            if(count==5)continue;
+            console.log(count);
+        }
+        console.log("ຈົບໂປຣແກຣມ")
+    </script>
+___________________________________________________________________________
+	ຄ່າ null, undefinde ແລະ NaN
+	null ຄຶຕົວແປທີບໍ່ມີຄ່າໃດໆເລີຍ ບໍ່ເທົ່າກັບ 0 ແລະ ບໍ່ເທົ່າກັບສະຕິງວ່າງບໍ່ສາມາດນໍາໄປຄຳນວນໃດໆ ໄດ້ ແຕ່ຫາກນຳໄປປ່ຽບທ່ຽບດວ້ຍເງືອນໄຂຈະມີຄ່າເທົ່າກັບຄ່າ false
+	let a = null;
+	if(!a){
+		alert("a is null");
+	}else{
+		alert("a is not null");
+	}
+	
+	undefinde ຄື ຕົວແປທີ່ປະກາດເອົາໄວ້ແຕ່ບໍ່ໄດ້ກຳນົດຄ່າໃດໆໃຫ້ກັບມັນ ຍົກຕົວຢ່າງເຊັ່ນ:
+	let a;
+	alert(a);
+
+	NaN (ມາຈາກ Not a Number) ໜາຍເຖິງການນຳຕົວແປທີ່ບໍ່ແມ່ນຕົວເລກໄປຄຳນວນທາງຄະນິດສາດ
+	let a = 10;
+	let b ="x";
+	alert(10-b);
+ຕົວຢ່າງ: null
+    <script>
+        let a =null;
+
+        if(a){
+            console.log("a is null");
+        }else{
+            console.log("a not null")
+        }
+    </script>
+ຕົວຢ່າງ:NaN
+        let a = 10-"s";
+        console.log(a);
+_________________________________________________________________________________
+	ຟັງຊັ່ນ ແມ່ນຫຍັງ
+ຄວາມໜາຍທີ່ 1:
+	ຊຸດຄຳສັ່ງທີ່ນຳມາຂຽນຮວ່ມກັນເປັນກຸ່ມເພຶອໃຫ້ເອີ້ນໃຊ້ງານຕາມວັດຖຸປະສົງທີ່ຕ້ອງການ ແລະ ລົດຄວາມຊ້ຳຊ້ອນຂອງຄຳສັ່ງທີ່ໃຊ້ງານຕະຫລອດ ຟັງຊັນສາມາດນຳໄປໃຊ້ງານໄດ້ທຸກທີ່ ແລະ ແກ້ໄຂໄດ້ໃນພາຍຫຼັງ ເຮັດໃຫ້ໂຄດໃນໂປຮແກຣມມີລະບຽບ ແລະ ໃຊ້ງານໄດ້ສະດວກຫຼາຍຂື້ນ
+ຄວາມໜາຍທີ່ 2: 
+	ໂປຣແກຣມຍ່ອຍທີ່ນຳເຂົ້າມາເປັນສ່ວນໜຶ່ງຂອງໂປຣແກຣມຫຼັກ ເພຶອໃຫ້ສາມາດເອີ້ນໃຊ້ງານໄດ້ໂດຍບໍ່ຈຳເປັນຕ້ອງຂຽນໂຄດຄຳສັ່ງໃຫມ່ທັງໜົດ
+	ຮູບແບບຂອງຟັງຊັ້ນ
+1. ຟັງຊັນທີ່ບໍ່ມີການຮັບ ແລະ ສົ່ງຄ່າ
+function ຊື່ຟັງຊັນ(){
+// ຄໍາສັ່ງຕ່າງໆ
+}
+ການເອີ້ນໃຊ້ງານຟັງຊັນ:
+ຊື່ຟັງຊັນ();
+
+ຕົວຢ່າງ:
+    <script>
+
+        function a(){
+            console.log("HelloWordl");
+        }
+
+        a();
+        a();
+        a();
+    </script>
+ຫຼຶສ້າງປຸ່ມເພືອກົດ
+       <script>
+
+        function a(){
+            console.log("HelloWordl");
+        }
+        function message(){
+            alert("ທ່ານໄດ້ໂອນເງີນແລ້ວ")
+        }
+        function displayName(){
+            document.write("Saiayad")
+        }
+        a();
+        a();
+        a();
+    </script>
+    <button onclick="message();">ແຈ້ງເຕືອນ</button>
+    <button onclick="displayName();">ເບິ່ງລາຍຊື່</button>
+	ຮູບແບບຟັງຊັນແບບທີ່ 2
+2. ຟັງຊັນທີ່ມີການຮັບຄ່າເຂົ້າມາເຮັດວຽກ
+	function ຊື່ຟັງຊັນ(parameterl,parameter2,...)
+//ກຸ່ມຄໍາສັ່ງຕ່າງໆ
+}
+ອາກິວເມັນ ຄື ຕົວແປ ຫຼຶ ຄ່າທີ່ຕ້ອງການສົ່ງມາໃຫ້ກັບຟັງຊັນ (ຕົວແປສົ່ງ)
+ພາຮາມີເຕີ ຄື ຕົວແປທີ່ຟັງຊັນສ້າງໄວ້ສຳຫລັບຮັບຄ່າທີ່ຈະສົ່ງເຂົ້າມາໃຫ້ກັບຟັງຊັນ (ຕົວແປຮັບ)
+ການເອີ້ນໃຊ້ງານຟັງຊັນ
+ຊື່ຟັງຊັນ (argumentl,argument2,...);
+ຕົວຢ່າງ:
+
+ function fullName(fname, lname){
+            console.log("ຊື່ =",fname,"ນາມສະກຸນ =",lname);
+        }
+
+        fullName("ທ້າວໄຊຍະບາດ","ພຽນສອນ")
+ຫຼຶ
+
+        function myfunction(x,y){
+            let toral = x+y;
+            console.log("ຜົນຮວ່ມ =",toral);
+        }
+        myfunction(10,5);
+
+	ຮູບແບບຂອງຟັງຊັນແບບທີ່ 3
+3.ຟັງຊັນທີ່ມີສົ່ງຄ່າອອກມາ
+	function ຊື່ຟັງຊັນ(){
+	return ຄ່າທີ່ຈະສົ່ງອອກໄປ
+}
+<script>
+        function getIp(){
+            return "127.0.0.1";
+        }
+        function getNumber(){
+            return 100*100;
+        }
+
+        let myIp = getIp();
+        let total = getNumber();
+        console.log("Ip",myIp);
+        console.log("ຜົນການຄູນ =",total)
+    </script>
+
+	ຮູບແບບຂອງຟັງຊັນ
+4. ຟັງຊັນທີ່ມີການຮັບຄ່າເຂົ້າມາ ແລະ ສົ່ງຄ່າອອກໄປ
+function ຊື່ຟັງຊັັນ(parameter1,parameter2,...)
+	retrun ຄ່າທີ່ຈະສົ່ງອອກໄປ
+}
+ຕົວຢ່າງ:
+ <script>
+        function setSalary(money){
+            let bonus = 1000;
+           return money+bonus;
+        }
+       let a = setSalary(15000);
+       a-=500;
+       console.log("A ເງີນເດືອນກັບໂບນັດ",a);
+
+       let b = setSalary(20000);
+       console.log("B ເງີນເດືອນກັບໂບນັດ",b);
+    </script>
+
+	ການສ້າງຟັງຊັນແບບກຳນົດຄ່າເລິ່ມຕົ້ນ
+function ຊື່ຟັງຊັນ (name="Saiyalad",parameter2,...){
+	// ຄໍາສັ່ງຕ່າງໆ
+}
+ຕົວຢ່າງ:
+<script>
+        function fullName(fname,lname,city="ບໍ່ໄດ້ລະບຸກ"){
+            console.log("ຊື່ =",fname," ນາມສະກຸນ =",lname," ທີ່ຢູ່ =",city);
+        }
+
+        fullName("ໄຊຍະລາດ","ພຽນສອນ","ນາຕໍນ້ອຍ")
+        fullName("ນິຊາ","ພັນທະວົງ",)
+        fullName("ແສງດາວ","ວິລະວົງ","ລອງປໍ")
+    </script>
+
+	ຂອບເຂດຂອງຕົວແປ
+- local variableຕົວແປທີ່ເຮັດວຽກຢູ່ໃນຟັງຊັນມີຂອບເຂດການເຮັດວຽກຕັ້ງແຕ່ຈຸດເລິ່ມຕົ້ນໄປຈົນເຖິງຈຸດສີ້ນສຸດຂອງຟັງຊັນ
+- global variable ຕົວແປທີ່ເຮັດວຽກຢູ່ນອກຟັງຊັນມີຂອບເຂດການເຮັດວຽກຕັ້ງແຕ່ຈຸດເລິ່ມຕົ້ນໄປຈົນເຖິງຈຸດສີ້ນສຸດຂອງໄຟຮ໋ທີ່ປະກາດໃຊ້ 
+ຕົວຢ່າງ:
+ <script>
+        let a =100;//global
+
+        function display(){
+            let b = 50;//local
+            console.log("a ໃນຟັງຊັນ",a);//ໃຊ້ງານໄດ້
+            console.log("b ໃນຟັງຊັນ",b);//ໃຊ້ງານໄດ້
+        }
+        console.log("a ນອກຟັງຊັນ",a);//ໃຊ້ງານໄດ້
+        console.log("b ນອກຟັງຊັນ",b);//ໃຊ້ງານບໍ່ໄດ້
+        display();
+    </script>
+
+ຖ້າຫາກວ່າຕົວແປຄືກັນ
+ <script>
+        let a =100;//global
+
+        function display(){
+            let a = 50;//local
+            console.log("a ໃນຟັງຊັນ",a) = 50
+            console.log("a ໃນຟັງຊັນ",a) = 50
+        }
+        console.log("a ນອກຟັງຊັນ",a) = 100
+        console.log("a ນອກຟັງຊັນ",a); = 100
+        display();
+    </script>
+_________________________________________________________________________________________
+	Array Properties & Function
+ຫາຈຳນວນສະມາຊິກ ແລະ ລຽງລຳດັບ
+ົ	let color = ["ແດງ","ຂຽວ","ເຫຼຶອງ"];
+	let x = color.length;
+	let y = color.sort();
+ສະມາຊິກຕົວແລກ ແລະ ຕົວສຸດທ້າຍ
+	let first = color[0]
+	let last = color[color.length-1];
+ການເພິ່ມສະມາຊິກ
+	color.push("ສີເທົ່າ");
+ຕົວຢ່າງ:
+ <script>
+        // ຫາຈຳນວນສະມາຊິກ ແລະ ລຽງລຳດັບ
+        let color = ["ແດງ","ຂຽວ","ຂາວ","ຟ້າ","ເຫຼຶອງ"];
+        let count = color.length; //ຕົວທີ່ບອກວ່າ colorຂອງເຮົາມີຈັກຕົວສະແດງເປັນຕົວເລກ
+        console.log("ກ່ອນລຽງ",color); //ຍັງບໍ່ທັນລຽງດວ້ຍ sort()
+        let result = color.sort(); //ຕົວລຽບດຳລັບຕາມພະຍັນສະນະ ແລະ ສະຫຼະ
+        console.log("ຫຼັງລຽງ",result);
+        console.log("ຕົງກັນຂ້າມກັບ",result.reverse()); //ຕົງກັນຂ້າມກັບsort()
+
+        //ຫາສະມາຊິກຕົວແລກ ແລະ ຕົວສຸດທ້າຍ
+        let fname =["ມັງກອນ","ກຸມພາ","ເມສາ","ພຶດສະພາ"];
+        console.log(fname[0]); //ຊອກສະມາຊິກຕົວແລກ
+        console.log(fname[fname.length-1]) //ຊອກສະມາຊິກຕົວສຸດທ້າຍ
+
+        //ເພິ່ມສະມາຊິກເຂົ້າໄປໃນArray
+        console.log("ກ່ອນເພິ່ມ",color);
+        color.push("ດຳແດງ");
+        color.push("ສົ້ມ")
+        console.log("ຫຼັງເພິ່ມ",color);
+    </script>
+
+ເຂົ້າເຖິງສະມາຊິກດວ້ຍ ForLoop
+	let color = ["ແດງ","ຟ້າ",","ເຫລືອງ"];
+	let count = color.length;
+ເຊັ່ນ:
+	for(let i = 0; i < count ; i++){
+	console.log(color[i]);
+	}
+ຕົວຢ່າງ:
+    <script>
+         let color = ["ແດງ","ຂຽວ","ຂາວ","ຟ້າ","ເຫຼຶອງ","ດຳ"];
+         for(let i = 0;i<color.length;i++){
+            console.log("ດຳລັບທີ່",i,color[i]);
+         }
+    </script>
+
+ເຂົ້າເຖິງສະມາຊິກ Array ດ້ວຍ ForEach
+	let color=["ແດງ","ຟ້າ","ສົ້ມ"];
+	color.forEach(myData);
+
+	function myData(item){
+		console.log(item);
+	}
+ຕົວຢ່າງ:
+    <script>
+        let color = ["ແດງ","ຂຽວ","ຂາວ","ຟ້າ","ເຫຼຶອງ","ດຳ"];
+
+        color.forEach(myData);
+
+        function myData(item){
+            console.log("ສີ",item);
+        }
+    </script>
+
+ແປງ Array ເປັນ string
+- .toString()	// ແປງເປັນ String
+- .join("*");	// ນໍາຄ່າແຕ່ລະຄ່າໃນຕົວແປ Array ມາລ່ວມກັນເປັນຂໍ້ຄວາມ ແລະ ສົ່ງຄ່າກັບເປັນຂໍ້ຄວາມທີ່ມີຕົວຄັ່ນຄ່າຕົວແປແຕ່ລະຄ່າຕາມທີ່ກຳນົດ
+- color.pop(); 	// ເອົາຕົວສຸກທ້າຍອອກ
+- let x = color.pop();	//ເອົາຕົວທ້າຍອອກແລ້ວເກັບໃນຕົວແປ x
+
+<script>
+        // .toString()
+                let color1 = ["ແດງ","ຂຽວ","ຂາວ","ຟ້າ","ເຫຼຶອງ","ດຳ"];
+                let x = color1.toString();
+                console.log(x);
+        // .join
+                let color2 = ["ແດງ","ຂຽວ","ຂາວ","ຟ້າ","ເຫຼຶອງ","ດຳ"];
+                let y = color2.join("-");
+                console.log(y);
+            // pop ອອກ
+                let color3 = ["ແດງ","ຂຽວ","ຂາວ","ຟ້າ","ເຫຼຶອງ","ດຳ"];
+                console.log(color3);
+                color3.pop();
+                color3.pop();
+                console.log(color3);
+                // pop ເພິ່ມເຂົ້າ
+                let h = color3.pop();
+                console.log(h);
+    </script>
+
+ການລ່ວມ Array
+
+	let fruits = ["ມ່ວງ","ສົ້ມ"]
+	let vegetables = ["ຜັກກາດ","ຟັກທອງ","ແຕງ"]
+	let hardware =["ເມົາ","ຄີບອດ",]
+
+	let carts = fruits.concat(vegetables,computer);
+
+ຕົວຢ່າງ:
+<script>
+        let a = ["ຜັກກາດ","ອາງຸ້ນ"];
+        let b = ["ເມົາ","ຄີບອດ"];
+        let c = ["ຈານ","ບວງ"];
+
+        a = a.concat(b)
+        console.log(a);
+
+        b = c.concat(c,a);
+        console.log(b)
+    </script>
+
+ການລຽ້ງລຳດັບໃນ Array
+
+- let fruits = ["ສົ້ມ","ອາງຸ້ນ"];
+- fruits.sort();
+- fruits.reverse();
+ລຽງລຳດັບໃນ Array ແບບຕົວເລກ (ນ້ອຍຫາຫຼາຍ)
+let points = [20, 100, -100, 5, -25, 10];
+points.sort(function(a,b){
+	return a-b
+});
+a ຄື ຄ່າຕົວເລກທີ່ມີຄ່າລົບຈະຖຶກເອີ້ນກ່ອນ
+b ຄື ຄ່າຕົວເລກທີ່ມີຄ່າບວກຈະຖຶກເອີ້ນຕອນຫຼັງ
+ຕົວຢ່າງ:
+ <script>
+        let points =[20,-5,40,100,-500,150];
+
+        console.log(points);
+
+        // ນ້ອຍສຸດໄປຫຼາຍສຸດ
+        points.sort(function(z,a){
+            return z-a;
+        });
+        console.log(points);
+
+        // ຫຼາຍຫານ້ອຍ
+        points.sort(function(a,b){
+            return b-a;
+        });
+        console.log(points);
+    </script>
+
+_________________________________________________________________________________
+JavaScript Object
+
+let ຊື່ວັດຖຸ ={propertyName:value}
+
+ຕົວຢ່າງເຊັ່ນ:
+let user = {
+	name:"Saiyalad",age:20,email:"jayj28222@gmail.com"
+};
+let product ={name:"ໜາກມ່ວງ",price:150,category:"ໜາກໄມ້"}
+
+ການເຂົ້າເຖິງຂໍ້ມູນ
+	objectName.propertyName
+	objectName["propertyName"]
+ຍົກຕົວຢ່າງເຊັ່ນ
+	user.name
+	user.["name"]
+
+ຄວາມແຕກຕ່າງລະຫວ່າງ Array ແລະ Object
+- Array ມີ Index ເປັນຕົວເລກ , Object ກຳນົດເປັນຊື່
+- Array ໃຊ້ [], ສ່ວນ Object ໃຊ້ {}
+
+ຕົວຢ່າງ:
+    <script>
+        // object
+        let product = {
+            name : "ເມົາ",
+            price : 1500,
+            color : "black",
+            category : "computer",
+            size : "M",
+        }
+        console.log("ຊື່ສິນຄ້າ =",product.name);
+        console.log("ລາຄາ =",product.price);
+        console.log("ສີ =",product.color);
+        console.log("ປະເພດ",product.category)
+        console.log("ຂະໜາດ =",product.size);
+
+        //  array
+        let item = ["ເມົາ",1500,"black","computer","M"]
+        console.log("ຊື່ສິນຄ້າ =",item[0]);
+        console.log("ລາຄາ =",item[1]);
+        console.log("ສີ =",item[2]);
+        console.log("ປະເພດ =",item[3]);
+        console.log("ຂະໜາດ =",item[4]);
+    </script>
+
+
+Object (Method)
+	tet user = {
+		name:"Jay"
+		age:20
+		email:"jayj28222.com"
+		getUser:function(){
+			return this.name +" "+ this.email;
+		}
+	 };
+};
+ການເອີ້ນໃຊ້ງານ
+objectName.methodName();
+let data = user.getUser();
+
+ຕົວຢ່າງ:
+     <script>
+         let product = {
+            name : "ເມົາ",
+            price : 1500,
+            color : "black",
+            category : "computer",
+            size : "M",
+            displayProduct:function(){
+                return " ຊື່ສິນຄ້າ = " + this.name + " ລາຄາ = " + this.price + " ສີ = " + this.color + " ປະເພດ = " + this.category + "ຂະໜາດ = " + this.size
+            },
+            discount:function(){
+                return this.price = 1000;//ຄຳນວນສວນລົດ
+            },
+            getcolor:function(){
+                return this.color;//ຊອກຫາສີຂອງສິນຄ້າ
+            }
+        }
+
+       console.log(product.displayProduct());
+       console.log(product.discount());
+       console.log(product.getcolor());
+    </script>
+
+_____________________________________________________________________________________
+ການຍືນຍັນດວ້ຍ confirm()
+	ເປັນໜ້າຕ່າງທີ່ຕ້ອງການສວບຖາມການຍັນຍືນຈາກຜູ້ໃຊ້ ກ່ອນທີ່ຈະທຳການໃດໆ ຕໍ່ໄປ
+		confirm("ຂໍ້ຄວາມ");
+ໂດຍຜົນລັບຈະມີຄ່າທາງຄະນິດສາດ
+
+- ມີຄ່າເປັນ true ເມືອຜູ້ໃຊ້ຄິກ ok
+- ມີຄ່າເປັນ false ເມືອຜູ້ໃຊ້ຄິກ cancel
+
+ຕົວຢ່າງ:
+ <button onclick="deleteData()">ລົບຂໍ້ມູນ</button>
+    <script>
+        function deleteData(){
+           let result = confirm("ຕ້ອງການລົບຂໍ້ມູນຫຼຶບໍ ?");
+           if(result){
+               alert("ລົບຂໍ້ມູນແລ້ວ");
+           }else{
+               alert("ຍົກເລີກການລົບຂໍ້ມູນແລ້ວ")
+           }
+        }
+    </script>
+
+_________________________________________________________________________________________
+HTML DOM (Document Object Model)
+
+	ເມືອໜ້າເວັບໂຫລດສຳເລັດແລ້ວ Web Browser ມັນຈະສ້າງ DOM ຂອງໜ້ານັ້ນຂື້ນມາໂດຍເບິ່ງ HTML ເປັນໂຄງສ້າງຕົ້ນໄມ້ (ກອ້ນ Object) ຫຼຶ ເອີ້ນວ່າ DOM
+<html>
+<head>
+	<title>My title</title>
+</head>
+<body>
+<a href="#">My link</a>
+<h1>My header</h1>
+</body>
+</html>
+			
+				    Document
+				          |
+				  Root element
+___________________________________ <html>_______________________
+Element:							 Element:
+<head>							  <body>
+     |							       |
+Element:				________________________________________
+<title>		Attnbute:	_______ Element:				 Element:
+     |		 "href"		  <a>				   <h1>
+  Text:				    |				       |
+"My title"				 Text:				     Text:
+			             "My link"				"My header"
+
+Tag ຕ່າງໆໃນ HTML ຈະເອີ້ນວ່າ Element
+
++ ຄຸນສົມບັດຂອງ HTML DOM
+	- ເຂົ້າເຖິງ ແລະ ປຽນຄຸນສົມບັດທັ້ງໜົດຂອງ Element ໃນໜ້າເວັບໄດ້
+	- ຄວບຄຸມ ແລະ ປ່ຽນຮູບແບບ CSS ໄດ້
+	- ສາມາດຕອບສະໜອງກັບທຸກເຫດຜົນທີ່ເກີດຂື້ນໜ້າເວັບໄດ້
++ ການເຂົ້າເຖິງ Element ຜ່ານ Id, Tag, Class
+	- doucment.getElementById("ຊື່ໄອດີ");
+	- doucment.getElementTagName("ຊື່ແທັກ);
+	- doucment.getElementClassName("ຊື່ຄາດ");
+	- doucment.querySelector(".ຊື່ຄາດ")
+	- doucment.querySalectorAll("p") ຄືການດຶງເອົາແທັກ p ມາທັງໜົດ
+
+ຕົວຢ່າງ:
+<body>
+    <p>Saiyalad</p>
+    <p id="dk">HTML JS CSS</p>
+    <p id="mo">Holle</p>
+    <p id="no">js</p>
+    <p class="my">hoooo</p>
+    <button onclick="js()">ສະແດງຂໍ້ມູນ</button>
+    <button onclick="di()">ສະແດງຕົວເລກ</button>
+    <script>
+        // Tag
+        let a = document.getElementsByTagName("p");
+        console.log(a);
+        // id
+        let b = document.getElementById("dk");//ອ້າງອິງ
+        let c = document.getElementById("mo")
+        console.log(b);
+        
+        function js(){
+            b.innerText="ສອນພາສາໂປຣແກຣມມິ່ງ";//ສະແດງຜົນ
+            c.innerHTML="<b>ສອນພາສາ</b>";
+        }
+
+        let n = document.getElementById("no");
+        let x = 10;
+        let y = 20;
+        function di(){
+            n.innerHTML="ສະແດງຂໍ້ມູນຕົວແປ x= "+x+"= y"+y;
+        }
+
+        const m = document.querySelector(".my");
+        const l = document.querySelector("#di");
+        const o = document.querySelectorAll("p");
+        console.log(m)
+        console.log(l)
+    </script>
+</body>
+
+
++ DOM Document
+	- ປ່ຽນເນື້ອຫາ HTML : element.innerHTML
+	- ປ່ຽນເນື້ອຫາ Text : element.innnerText
+	- ປ່ຽນ style Element : element.style.properties = value
+
+	ດຳເນີນການຜ່ານ Method
+	- element.setAttribute(attribute, value)
+ໜາຍເຫດ: let  ເອົາມາໃຊ້ສຳລັບການສ້າງຕົວແປທີ່ມີການປ່ຽນແປງຂໍ້ມູນ(ໃຊ້ໃນການສ້າງຕົວແປທີ່ເກັບຂໍ້ມູນທີ່ມີການປ່ຽນແປງໃຊ້ let)
+	const ເອົາມາໃຊ້ອ້າງອີງທີ່ບໍ່ສາມາດປ່ຽນແປງໄດ້ (ຖ້າໃຊ້ໃນການປ່ຽນແປງຂໍ້ມູນຂອງແທັກ, ໄອດີ, ຄາດ ໃຫ້ໃຊ້ const)
+ຕົວຢ່າງ:
+<body>
+    <p id="title">ບົດທີ່1</p>
+    <p class="content">ການຮຽນພາສາ js</p>
+    <div class="light">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis, officia praesentium dolorem obcaecati reprehenderit, quaerat inventore quas quisquam facilis, nostrum illo id quae eius? Illo quia id earum. Aliquam, fugiat.</p>
+    </div>
+    <button onclick="aa()">js</button>
+    <button onclick="light()">ໂຫລດກາງເວັນ</button>
+    <button onclick="dark()">ໂຫລດກາງຄືນ</button>
+    
+    <script>
+        const titelEl = document.getElementById("title");
+        const contentEl = document.querySelector(".content");
+        const allEl = document.querySelector("p");
+        const box = document.querySelector(".light")
+
+        function aa(){
+            titelEl.style.color="red";
+        titelEl.style.background="yellow"
+        titelEl.style.fontSize="60px"
+
+        // contentEl.setAttribute("class","jay");
+        // box.setAttribute("class","dark");
+        }
+        function light(){
+            box.setAttribute("class","light");
+        }
+        function dark(){
+            box.setAttribute("class","dark");
+        }
+    </script>
+</body>
+ຕົວຢ່າງ:
+<body>
+    <ul id="manu">
+        <li id="item-1">A</li>
+        <li id="item-2">B</li>
+        <li id="item-3">C</li>
+    </ul>
+    <button onclick="aa()">ເພິ່ມລາຍການ</button>
+    <button onclick="bb()">ລົບ</button>
+    <button onclick="cc()">ແທນທີ່</button>
+    <script>
+        // // ການເພິ່ມ
+        //    const manu = document.getElementById("manu");
+        //    let count = 1;
+
+        //    function aa(){
+        //     const item = document.createElement('li');
+        //     item.innerHTML ="item"+(count)++;
+        //     manu.appendChild(item);
+        //    }
+           
+        // //    ການລົບ
+        // const manu = document.getElementById("manu");
+        // const item = document.getElementById("item-2");
+        // function bb(){
+        //     manu.removeChild(item);
+        // }
+
+        // ການແທ່ນທີ່
+        const manu = document.getElementById("manu");
+        const item = document.getElementById("item-2");
+        const itemB = document.getElementById("item-1")
+
+        const newitem =document.createElement("li")
+        newitem.innerText = "X"
+
+       function cc(){
+        manu.replaceChild(newitem,itemB);
+       }
+
+    </script>
+</body>
+
++ DOM Nodes
+	- document.createElement(element)//ສ້າງ element ໃຫມ່
+	- document.removeChild(element)// ລົບ node ລູກ
+	- document.appendChild(element)// ນຳ element ໄປຕໍ່ໃນ node ແມ່
+	- document.replaceChild(new. old) ແທນທີ່ element
+ຕົວຢ່າງ:
+<body>
+    <ul id="manu">
+        <li id="item-1">A</li>
+        <li id="item-2">B</li>
+        <li id="item-3">C</li>
+    </ul>
+    <button onclick="aa()">ເພິ່ມລາຍການ</button>
+    <button onclick="bb()">ລົບ</button>
+    <button onclick="cc()">ແທນທີ່</button>
+    <script>
+        // // ການເພິ່ມ
+        //    const manu = document.getElementById("manu");
+        //    let count = 1;
+
+        //    function aa(){
+        //     const item = document.createElement('li');
+        //     item.innerHTML ="item"+(count)++;
+        //     manu.appendChild(item);
+        //    }
+           
+        // //    ການລົບ
+        // const manu = document.getElementById("manu");
+        // const item = document.getElementById("item-2");
+        // function bb(){
+        //     manu.removeChild(item);
+        // }
+
+        // ການແທ່ນທີ່
+        const manu = document.getElementById("manu");
+        const item = document.getElementById("item-2");
+        const itemB = document.getElementById("item-1")
+
+        const newitem =document.createElement("li")
+        newitem.innerText = "X"
+
+       function cc(){
+        manu.replaceChild(newitem,itemB);
+       }
+
+    </script>
+</body>
+
++ DOM CSS Add & Remove Class
+	- element.classList.add("class"); // ເພິ່ມ class style
+	- element.classList.remove("class"); // ລົບ class style
+	- element.classList.toggle("class"); // ສະລັບ class style
+	- elementt.classList.contains("class") // ປ່ຽບທ່ຽບ class style
+ຕົວຢ່າງ:
+<body>
+    <div id="box">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque quia consequatur rem iusto aut veritatis, dolor officia minima eos dolorem! Laborum provident ullam praesentium earum similique sint iusto laboriosam fugiat?
+    </div>
+    <button onclick="add()">ເພິ່ມ</button>
+    <button onclick="remove()">ລົບ</button>
+    <button onclick="switchMode()">ສະລັບ</button>
+    <script>
+        const box = document.getElementById("box");
+        let jay;
+
+        // ການເພິມ
+        function add(){
+            box.classList.add("darkMode")
+        }
+
+        // ການລົບ
+        function remove(){
+            box.classList.remove("darkMode")
+        }
+        // ການສະລັບ
+        function switchMode(){
+            box.classList.toggle("darkMode")
+            jay = box.classList.contains("darkMode")
+            console.log(status);
+            if(jay){
+                box.style.color="yellow"
+            }else{
+                box.style.color="red"
+            }
+        }
+    </script>
+</body>
+
+
++ DOM Event
+	ຄຶ ເຫດການ ຫຼຶ ການກະທຳບາງຢ່າງທີ່ເກີດຂື້ນກັບອີລີເມັນ ເຊັ່ນ ການຄິກເມົາ ການເຄືອນຍ້າຍເມົາ ການກົດປຸ່ມຄີບວດ ເປັນຕົ້ນ
+	ໂດຍຜູ້ພັດທະນາສາມາດໃຊ້ອີເວັນທີ່ເກີດຂື້ນເປັນຕົວກຳໜົດໃຫ້ຕອບສະໜອງ ຫຼຶ ກະທຳບາງຢ່າງໄດ້ ເຊັ່ນ ການຄິກເມົາແຈ້ງເຕືອນ ເປັນຕົ້ນ
+
+ຊື່ Event		ຄວາມໜາຍ			ເຮັດວຽກຮວ່ມກັບແທັກ
+onfocus="..."	ເມືອອີລິເມັນນັ້ນໄດ້ຮັບການໂຟກັດ	select, text, textarea
+onblur="..."	  ເມືອອີລິເມັນນັ້ນສູນເສີຍການໂຟກັດ	select, text, textarea
+		ໂຟກັດໄປຍັງອິລີເມັນ		
+onchange="..."	  ເມືອຜູ້ໃຊ້ປ່ຽນແປງຄ່າໃນຟອນຂໍ້ມູນ	select, text, textarea
+onselect="..."	  ເມືອຜູ້ໃຊ້ເລືອກຂໍ້ຄວາມ (ໃຊ້ເມົາລາກ)	text, textarea
+		ໃນຊ່ວງຂໍ້ຄວາມ
+onsubmit="..."	  ເມືອຜູ້ໃຊ້ຄິກປຸ່ມ submit		form
+onMouseover="..."	  ເກີດເມືອອອບເຈກນັ້ນຖຶກເລືອນ	a,div 
+		Mouse pointer ໄປທັບ
+onMouseout="..."	  ເກີດເມືອອອບເຈກນັ້ນຖຶກເລືອນ mouse	       a,div
+		pointer ທີ່ທັບຢູ່ອອກໄປ
+onclick="..."	  ເກີດເມືອອອບເຈກນັ້ນຖຶກຄິກ	a, button, checkbox,
+					radio, reset, submit
+onload="..."	  ເກີດເມືອໂຫລດເອກະສານສຳເລັດ	body
+onunload="..."	  ເກີດເມືອຍົກເລີກການໂຫລດ ເຊັ່ນ ຄິກ	body
+		ປຸ່ມ Stop
+
+ຕົວຢ່າງ:
+<body onload="we()">
+    <div id="box">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia nostrum laboriosam aut, consectetur saepe minus accusamus deserunt hic eum ea veniam voluptas. Asperiores laborum a quibusdam soluta dolor autem debitis?</p>
+    </div>
+    <label for="">ຊື້</label>
+    <input type="text" placeholder="ກະລຸນາປ້ອນຊື່....." onfocus="hi(this)" onblur="au(this)">
+    <label for="">ເລືອກເຄືອງມຶ</label>
+    <select name="" id="manu" onchange="get()">
+        <option value="JavaScript">JavaScript</option>
+        <option value="Python">Python</option>
+        <option value="Bootstrap">Bootstrap</option>
+    </select>
+    <p id="di"></p>
+    <a href="" onmouseover="go(this)" onmouseout="as(this)">menu 1</a>
+    <a href="" onmouseover="go(this)" onmouseout="as(this)">menu 2</a>
+    <script>
+        function we(){
+            alert("ສະບາຍດີ")
+        }
+        function hi(obj){
+            obj.style.background="yellow";
+        }
+        function au(obj){
+            obj.style.background="red"
+        }
+        function get(){
+            const manu = document.getElementById("manu");
+            const di = document.getElementById("di");
+            console.log(manu.value.toUpperCase());
+            di.innerText = manu.value;
+        }
+        function go(obj){
+            obj.style.background="yellow"
+        }
+        function as(obj){
+            obj.style.background="red"
+        }
+    </script>
+</body>
+
++ EventListener
+	ຄື ເຫດຫານ ຫຼຶ ການກະທຳບາງຢ່າງທີ່ເກີດຂື້ນກັບອີລີເມັນ ແຕ່ຮູບແບບການຂຽນຈະຂຽນໃນຝັ່ງ JavaScript ທັ່ງໝົດ
+      ໂຄງສ້າງ:
+	element.addEventListener(event,callback)
+ຕົວຢ່າງ:
+<body>
+    <select name="" id="manu">
+        <option value="JavaScript">JavaScript</option>
+        <option value="Python">Python</option>
+        <option value="Bootstrap">Bootstrap</option>
+    </select>
+    <p id="di"></p>
+    <button id="btn">ແຈ້ງເຕືອນ</button>
+   <script>
+        //ອ້າງອີງ
+        const manu = document.getElementById('manu');
+       const btn = document.getElementById('btn')
+
+
+        // event
+        manu.addEventListener('change',get);
+        const di = document.getElementById('di');
+
+        btn.addEventListener('click',jay)
+
+        function get(){
+            di.innerText = manu.value
+        }
+        
+        function jay(){
+            alert("ສະບາຍດີ")
+        }
+   </script>
+</body>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // ຫາຈຳນວນສະມາຊິກ ແລະ ລຽງລຳດັບ
+        let color = ["ແດງ","ຂຽວ","ຂາວ","ຟ້າ","ເຫຼຶອງ"];
+        let count = color.length;//ຕົວທີ່ບອກວ່າ colorຂອງເຮົາມີຈັກຕົວສະແດງເປັນຕົວເລກ
+        console.log("ກ່ອນລຽງ",color);//ຍັງບໍ່ທັນລຽງດວ້ຍ sort()
+        let result = color.sort();//ຕົວລຽບດຳລັບຕາມພະຍັນສະນະ ແລະ ສະຫຼະ
+        console.log("ຫຼັງລຽງ",result);
+        console.log("ຕົງກັນຂ້າມກັບ",result.reverse());//ຕົງກັນຂ້າມກັບsort()
+
+        //ຫາສະມາຊິກຕົວແລກ ແລະ ຕົວສຸດທ້າຍ
+        let fname =["ມັງກອນ","ກຸມພາ","ເມສາ","ພຶດສະພາ"];
+        console.log(fname[0]);//ຊອກສະມາຊິກຕົວແລກ
+        console.log(fname[fname.length-1])//ຊອກສະມາຊິກຕົວສຸດທ້າຍ
+
+        //ເພິ່ມສະມາຊິກເຂົ້າໄປໃນArray
+        console.log("ກ່ອນເພິ່ມ",color);
+        color.push("ດຳແດງ");
+        color.push("ສົ້ມ")
+        console.log("ຫຼັງເພິ່ມ",color);
+    </script>
+</body>
+</html>

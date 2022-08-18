@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="manu">
+        <li id="item-1">A</li>
+        <li id="item-2">B</li>
+        <li id="item-3">C</li>
+    </ul>
+    <button onclick="aa()">ເພິ່ມລາຍການ</button>
+    <button onclick="bb()">ລົບ</button>
+    <button onclick="cc()">ແທນທີ່</button>
+    <script>
+        // // ການເພິ່ມ
+        //    const manu = document.getElementById("manu");
+        //    let count = 1;
+
+        //    function aa(){
+        //     const item = document.createElement('li');
+        //     item.innerHTML ="item"+(count)++;
+        //     manu.appendChild(item);
+        //    }
+           
+        // //    ການລົບ
+        // const manu = document.getElementById("manu");
+        // const item = document.getElementById("item-2");
+        // function bb(){
+        //     manu.removeChild(item);
+        // }
+
+        // ການແທ່ນທີ່
+        const manu = document.getElementById("manu");
+        const item = document.getElementById("item-2");
+        const itemB = document.getElementById("item-1")
+
+        const newitem =document.createElement("li")
+        newitem.innerText = "X"
+
+       function cc(){
+        manu.replaceChild(newitem,itemB);
+       }
+
+    </script>
+</body>
+</html>

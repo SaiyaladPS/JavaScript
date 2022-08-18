@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .darkMode{
+            border:1px solid #fff;
+            background-color: black;
+            color:white;
+            padding: 30px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque quia consequatur rem iusto aut veritatis, dolor officia minima eos dolorem! Laborum provident ullam praesentium earum similique sint iusto laboriosam fugiat?
+    </div>
+    <button onclick="add()">ເພິ່ມ</button>
+    <button onclick="remove()">ລົບ</button>
+    <button onclick="switchMode()">ສະລັບ</button>
+    <script>
+        const box = document.getElementById("box");
+        let jay;
+
+        // ການເພິມ
+        function add(){
+            box.classList.add("darkMode")
+        }
+
+        // ການລົບ
+        function remove(){
+            box.classList.remove("darkMode")
+        }
+        // ການສະລັບ
+        function switchMode(){
+            box.classList.toggle("darkMode")
+            jay = box.classList.contains("darkMode")
+            console.log(status);
+            if(jay){
+                box.style.color="yellow"
+            }else{
+                box.style.color="red"
+            }
+        }
+    </script>
+</body>
+</html>

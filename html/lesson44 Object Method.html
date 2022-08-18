@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         let product = {
+            name : "ເມົາ",
+            price : 1500,
+            color : "black",
+            category : "computer",
+            size : "M",
+            displayProduct:function(){
+                return " ຊື່ສິນຄ້າ = " + this.name + " ລາຄາ = " + this.price + " ສີ = " + this.color + " ປະເພດ = " + this.category + "ຂະໜາດ = " + this.size
+            },
+            discount:function(){
+                return this.price = 1000;//ຄຳນວນສວນລົດ
+            },
+            getcolor:function(){
+                return this.color;//ຊອກຫາສີຂອງສິນຄ້າ
+            }
+        }
+
+       console.log(product.displayProduct());
+       console.log(product.discount());
+       console.log(product.getcolor());
+    </script>
+</body>
+</html>
